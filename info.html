@@ -8,11 +8,12 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <script src="https://kit.fontawesome.com/243e25d138.js" crossorigin="anonymous"></script>
   <title>Information</title>
+
 </head>
 
 <body>
   <header class="info-page">
-    <a class="logo" href="index.html"><span>Food & Cooking</span></a>
+    <a class="logo" href="index.html"><span>Classes Info</span></a>
     <nav>
       <ul>
         <li class="active-page">
@@ -47,16 +48,91 @@
       </div>
     </nav>
   </header>
-  <article>
-    <div>
-      <!-- TODO: add main content here -->
-      <h1>Page 6</h1>
+
+  <!-- Begin Carousel -->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <img src="assets/images/Gallery/gallery01.jpg" style="width:100%">
+      <p class="text">Aerialist 1</p>
     </div>
-  </article>
-  <section style="padding: 40px">
-    <!-- TODO: add sidebar content here -->
-    <h3>Your Title</h3>
-  </section>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 6</div>
+      <img src="assets/images/Gallery/gallery02.jpg" style="width:100%">
+      <p class="text">Aerialist 2</p>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <img src="assets/images/Gallery/gallery03.jpg" style="width:100%">
+      <p class="text">Aerialist 3</p>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 6</div>
+      <img src="assets/images/Gallery/gallery04.jpg" style="width:100%">
+      <p class="text">Aerialist 4</p>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 6</div>
+      <img src="assets/images/Gallery/gallery05.jpg" style="width:100%">
+      <p class="text">Aerialist 5</p>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 6</div>
+      <img src="assets/images/Gallery/gallery06.jpg" style="width:100%">
+      <p class="text">Aerialist 6</p>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span> 
+    </div>
+  </div>
+  <br>
+
+  
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>  
+<!-- End Carousel -->
+
   <div class="to-top"><a href="#">Top</a></div>
   <footer>
     <div class="social-icon">
