@@ -16,6 +16,9 @@
 
 /* BEG styling for logo on top */
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: "Font Family 2";
 }
@@ -163,7 +166,7 @@ nav ul li a:hover {
 }
 /* END styling hero screen*/
 
-/* style page banner */
+/* style page banner / header */
 header.classes-page {
   background: #eee url(../images/silks01.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
   background-size: cover;
@@ -278,11 +281,33 @@ article > div {
 /* padding: top right bottom left */
 padding: 0px 40px 0px 40px;
 }
+
+/************** BEGIN footer icons *****/
+footer{
+  margin-top: auto;
+}
 footer > div.social-icon {
   padding: 30px;
   display: flex;
   justify-content: center;
 }
+.fa-brands.fa-facebook.fa-lg.fa-2x{
+  color: hsl(293, 77%, 39%);
+}
+.fa-brands.fa-square-instagram.fa-lg.fa-2x{
+  color: hsl(293, 77%, 39%);
+}
+.fa-brands.fa-twitter.fa-lg.fa-2x{
+  color: hsl(293, 77%, 39%);
+}
+.fa-solid.fa-envelope.fa-lg.fa-2x{
+  color: hsl(293, 77%, 39%);
+}
+
+
+
+/****************** END footer icons  ***********/
+
 
 @media screen and (max-width: 750px) {
   /*header {
@@ -350,23 +375,7 @@ footer > div.social-icon {
   nav > ul {
     display: none;
   }
-  header.food-page {
-    background: #eee url(../images/food-02.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
-    background-size: cover;
-    height: 270px;
-  }
-  header.page-3 {
-    /* add you own header here */
-  }
-  header.page-4 {
-    /* add you own header here */
-  }
-  header.page-5 {
-    /* add you own header here */
-  }
-  header.page-6 {
-    /* add you own header here */
-  }
+ 
   .dropdown {
     display: block;
   }
@@ -378,3 +387,23 @@ footer > div.social-icon {
   }
 }
 /********** END for dropdown menu in small screen **********/
+
+/********** BEGIN gallery *** */
+
+.gallery{
+  display: inline-block;
+  margin: 5px;
+  width: 200px
+}
+.gallery .description{
+  padding: 10px;
+  text-align: center;
+}
+.gallery img{
+  width: 100%;
+  height: auto;
+}
+
+/******* END gallery *****/
+
+
