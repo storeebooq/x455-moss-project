@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 
+<!-- FIXES NEEDED
+  -Carousel and scrollable area need to be side-by-side, horizontally aligned (flex to stack when small)
+-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,6 +11,20 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <script src="https://kit.fontawesome.com/243e25d138.js" crossorigin="anonymous"></script>
   <title>Information</title>
+
+  <style>
+    div.scrolling {
+      width: 500px;
+      height: 400px;
+      padding: 20px;
+      border: purple solid 1px;
+      overflow: auto;
+      /* auto - similar to scroll, but it adds scrollbars only when necessary */
+      /* overflow is shortcut for overflow-y and overflow-x */
+      /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
+      /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+    }
+  </style>
 
 </head>
 
@@ -101,36 +118,67 @@
     </div>
   </div>
   <br>
+  <article>
+    <h3>More Info and FAQ</h3>
+    <div class="scrolling">
+      <h4>First Title</h4>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <h4>Second Title</h4>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <h4>Third Title</h4>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <h4>Fourth Title</h4>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+    </div>
+  </article>
+
 
   
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>  
+ 
 <!-- End Carousel -->
 
   <div class="to-top"><a href="#">Top</a></div>
@@ -146,6 +194,35 @@ function showSlides(n) {
       <a href="mailto:skyhighodditorium@gmail.com" i class="fa-solid fa-envelope fa-lg fa-2x padding-right"></i></a>
     </div>
   </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script> 
 </body>
 
 </html>
