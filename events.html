@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-
+<!-- FIXES NEEDED 
+  -Accordian looses "More details" text when minimized
+  -need to get video and event details horizontally aligned, 2 columns
+-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,6 +11,53 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <script src="https://kit.fontawesome.com/243e25d138.js" crossorigin="anonymous"></script>
   <title>Events</title>
+  <style>
+    /* begin Page:Events accordian styling */
+    * {
+      box-sizing: border-box;
+    }
+
+    article {
+      width: 600px;
+    }
+
+    .accordion {
+      color: hsl(0, 0%, 100%);
+      cursor: pointer;
+      font-size: 15px;
+      text-align: right;
+      padding: 0 20px;
+      width: 500px;
+      height:20px;
+      background-color: purple;
+    }
+    .accordian-text{
+      margin-right:200px;
+    }
+
+    /* .active, */
+    .accordion:hover {
+      color: hsl(0, 3%, 63%);
+    }
+    
+
+    .panel {
+      display: none;
+      overflow: hidden;
+    }
+    /* END accordian styling */
+
+    /* begin embedded video styling */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 0;
+      margin-top: 25px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -35,7 +85,7 @@
         </li>
       </ul>
       <div class="dropdown">
-        <button class="dropbtn">Menu</button>
+        <button class="dropbtn"><i class="fa-solid fa-bars fa-2x"></i></button>
         <div class="dropdown-content">
           <a href="index.html">Home</a>
           <a href="classes.html">Classes</a>
@@ -48,15 +98,102 @@
     </nav>
   </header>
   <article>
-    <div>
-      <!-- TODO: add main content here -->
-      <h1>Page 4</h1>
+
+        <!--  Event 1  -->
+
+    <div class="flex-container">
+      <div style="width: 500px; word-wrap: break-word;">
+
+      <iframe width="500" height="315" src="https://www.youtube.com/embed/gts7S_KaH_U" title="Dark Leather" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+      </div>
     </div>
+    <div class="flex-container">
+      <h1 style="color:purple">Event 1</h1>
+      <div>
+        <h4>Topic 3</h4>
+        <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+        </p>
+        <div class="accordion">
+        <span class="accordian-text">More details</span>
+        <span class="fa fa-angle-down"></span>
+        </div>
+        <div class="panel">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad ipsam perferendis in, numquam, minima cumque autem iure id vero sapiente omnis illo voluptates earum nihil, deleniti eos dicta officia.</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+      <!--  Event 2  -->
+    <div class="flex-container">
+      <div style="width: 500px; word-wrap: break-word;">
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/zpYEM0Zj5J0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>          
+        </iframe>
+      </div>
+    </div>
+    <div class="flex-container">
+      <h1 style="color:purple">Event 1</h1>
+      <div>
+        <h4>Topic 3</h4>
+        <p>
+          Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+          id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+          dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+          neque, id pulvinar odio lorem non turpis.
+        </p>
+        <div class="accordion">
+          <span class="accordian-text">More details</span>
+          <span class="fa fa-angle-down"></span>
+        </div>
+        <div class="panel">
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad ipsam perferendis in, numquam, minima cumque autem iure id vero sapiente omnis illo voluptates earum nihil, deleniti eos dicta officia.</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+      <!--  Event 3  -->
+
+    <div class="flex-container">
+      <div style="width: 500px; word-wrap: break-word;">
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/5Luhs6gSfhY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>          
+        </iframe>
+      </div>
+    </div>
+    <div class="flex-container">
+      <h1 style="color:purple">Event 1</h1>
+      <div>
+        <h4>Topic 3</h4>
+        <p>
+          Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+          id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+          dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+          neque, id pulvinar odio lorem non turpis.
+        </p>
+        <div class="accordion">
+          <span class="accordian-text">More details</span>
+          <span class="fa fa-angle-down"></span>
+        </div>
+        <div class="panel">
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad ipsam perferendis in, numquam, minima cumque autem iure id vero sapiente omnis illo voluptates earum nihil, deleniti eos dicta officia.</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
   </article>
-  <section style="padding: 40px">
-    <!-- TODO: add sidebar content here -->
-    <h3>Your Title</h3>
-  </section>
+
   <div class="to-top"><a href="#">Top</a></div>
   <footer>
     <div class="social-icon">
@@ -71,5 +208,25 @@
     </div>
   </footer>
 </body>
+
+<!-- BEG JavaScript -->
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;  // .nextElementSibling vs .previousElementSibling
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+        this.innerHTML = "<span class='fa fa-angle-down'></span>";
+      } else {
+        panel.style.display = "block";
+        this.innerHTML = "<span class='fa fa-angle-up'></span>";
+      }
+    });
+  }
+</script>
+<!-- END JavaScript -->
 
 </html>

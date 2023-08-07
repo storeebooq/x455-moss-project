@@ -304,6 +304,11 @@ article > div {
 padding: 0px 40px 0px 40px;
 }
 
+/***** Styling Event page content boxes ******/
+.event{
+  margin: right 50%;
+}
+
 /************** BEGIN footer icons *****/
 footer{
   margin-top: auto;
@@ -442,10 +447,11 @@ img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
   /* max-width: 1000px; */
-  width:50%;
+  width:40%;
   max-height: 500px;
   position: relative;
   margin-top: 50px;
+  margin-left:25px;
   margin: left 50%;
 }
 .mySlides.fade img{
@@ -536,3 +542,8 @@ img {vertical-align: middle;}
 }
 
 /***************** END Carousel  ************/
+
+/************* Begin table *******/
+
+
+/****** END table *******/
