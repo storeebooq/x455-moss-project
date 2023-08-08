@@ -449,7 +449,7 @@ img {vertical-align: middle;}
   /* max-width: 1000px; */
   width:40%;
   max-height: 500px;
-  position: relative;
+  position: relative; 
   margin-top: 50px;
   margin-left:25px;
   margin: left 50%;
@@ -547,3 +547,83 @@ img {vertical-align: middle;}
 
 
 /****** END table *******/
+
+/******* Page:Schedule styling ******/
+.title1{
+  display: inline-block;
+  border-bottom: 3px solid purple;
+}
+.classbox{
+  /* border: 2px solid purple; */
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  margin-top: 25px;
+  margin-left: 25px;
+  padding: 10px; 
+
+}
+.imagebox{
+  float: right;
+  background-color: purple;
+  color: white;
+  border-radius: 5px;
+  width: 50%;
+  height: auto;
+  margin-top: 25px;
+  margin-right: 25px;
+  padding: 15px;
+  display: flow-root;
+
+}
+#img1{
+  float: right;
+  margin: 10px;
+}
+#img2{
+  float: left;
+  margin: 10px;
+}
+
+/******** END Page:Scheduling styling *****/
+
+/******** begin Page:Events accordian styling **********/
+* {
+box-sizing: border-box;
+}
+
+.accordion {
+color: hsl(0, 0%, 100%);
+cursor: pointer;
+font-size: 15px;
+text-align: right;
+padding: 0 20px;
+width: 500px;
+height:20px;
+background-color: purple;
+}
+.accordian-text{
+margin-right:200px;
+}
+
+.accordion:hover {
+color: hsl(0, 3%, 63%);
+}
+
+
+.panel {
+display: none;
+overflow: hidden;
+} 
+/********* BEGIN Page:Events -  embedded video styling **********/
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-evenly;
+padding: 0;
+margin-top: 25px;
+margin-left: 25px;
+}
+
+/******** END Page:Events - embedded vid styling *****/
