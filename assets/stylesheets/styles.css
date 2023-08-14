@@ -154,7 +154,7 @@ nav ul li a:hover {
   bottom: 0; /* need to have position set to "fixed" */
   width: auto;
   height: auto;
-  background: #eee url(../images/giveyou1.JPG) no-repeat center;
+  background: #eee url(../images/chains02.jpg) no-repeat center;
   background-size: cover;
   z-index: -1;
 } 
@@ -179,6 +179,19 @@ nav ul li a:hover {
 .hero-text button:hover{
   background-color: hsla(0, 0%, 100%, 0.947);
   color: purple;
+}
+
+.homeparagraph1{
+  font-family: 'Playful Display', serif;
+  font-size: 36px;
+  font-weight: bold;
+  /* text-shadow: 1px 1px 3px hsl(291, 56%, 86%); */
+}
+.homeparagraph2{
+  font-family: 'Playful Display', serif;
+  font-size: 24px;
+  font-weight: bold;
+  /* text-shadow: 1px 1px 3px hsl(291, 56%, 86%) */
 }
 /* .hero-text {
   color: #f2edf3;
@@ -223,8 +236,9 @@ header.info-page {
 h1 {
   margin: 0px 0px 1em 0px;
   color: #ffffff;
-  font-size: 1.7em;
+  font-size: 48px;
   font-weight: bold;
+  font-family: 'Playful Display', serif;
 }
 h3 {
   margin: 0px 0px 1.5em 0px;
@@ -285,17 +299,6 @@ img.size03 {
   justify-content: center;
 }
 
-#vegetables {
-  color: seagreen;
-}
-
-#fruits {
-  color: orangered;
-}
-
-#grains {
-  color: saddlebrown;
-}
 /* END styling images */
 
 /* set padding from browser edges for content */
@@ -545,6 +548,26 @@ img {vertical-align: middle;}
 
 /************* Begin table *******/
 
+table {
+  border-spacing: 0;
+  width: 80vh;
+  border: 1px solid #a017b2;
+}
+
+th {
+  cursor: pointer;
+  background-color: hsla(300, 100%, 25%, 0.786);
+  color:white;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(odd) {
+  background-color: #ccb2d3
+}
 
 /****** END table *******/
 
@@ -615,6 +638,9 @@ color: hsl(0, 3%, 63%);
 display: none;
 overflow: hidden;
 } 
+
+/*********** END Page:events accordian styling *********/
+
 /********* BEGIN Page:Events -  embedded video styling **********/
 .flex-container {
 display: flex;
@@ -627,3 +653,20 @@ margin-left: 25px;
 }
 
 /******** END Page:Events - embedded vid styling *****/
+
+/************ Page:Info scrolling box *************/
+div.scrolling {
+  margin: 15px;
+  width: 40%;
+  height: 400px;
+  padding: 20px;
+  border: purple solid 1px;
+  overflow: auto;
+  /* auto - similar to scroll, but it adds scrollbars only when necessary */
+  /* overflow is shortcut for overflow-y and overflow-x */
+  /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
+  /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+}
+
+/*********** END Page:Info scrolling box *********/
+
